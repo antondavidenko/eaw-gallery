@@ -21,7 +21,7 @@ body {
 }
 
 .project {
-  width: 300px;
+  width: 130px;
   float: left;
   margin: 10px;
   background-color:#141a1f;
@@ -45,15 +45,35 @@ body {
   width: 1020px;
   background-color:#101418;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
   padding: 10px;
 }
 
 .project-name {
-  margin-left: 140px;
+  margin-left: 0px;
 }
 
 .project-play {
   margin-left: 140px;
+}
+
+#device-selector {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+#device-selector span {
+  cursor: default;
+}
+
+#device-selector .clickable {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+#device-selector .selected {
+  font-weight: bold;
+  color: #ffffff;
 }
 
