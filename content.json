@@ -1,40 +1,189 @@
-{
+﻿{
   "content": [
     {
-      "name": "Character constructor tool",
+      "name": "Blind Date",
       "ico": "char_ico.jpg",
-      "fav": "1",
-      "play": "./demo/char_v6/"
-    },
-    {
-      "name": "Transformers slot machine",
-      "ico": "tf_slot_ico.jpg",
-      "fav": "1",
-      "play": "./demo/tfslot_v3/"
-    },
-    {
-      "name": "Hunters challenge",
-      "ico": "arpg_ico.jpg",
-      "fav": "1",
-      "play": "./demo/arpg_v8/"
-    },
-    {
-      "name": "RAN",
-      "ico": "ran_ico.jpg",
-      "fav": "1",
-      "play": "./demo/ran_v6/"
-    },
-    {
-      "name": "Mercenaries Guild",
-      "ico": "mg_ico.jpg",
-      "fav": "1",
-      "play": "./demo/mg_v7/"
-    },
-    {
-      "name": "Ice Rink Site",
-      "ico": "ice_rink_site_ico.jpg",
       "fav": "0",
-      "play": "./demo/mg_v7/"
+      "play": {
+        "desktop": "demo/bd/desktop/index.html",
+        "mobile": "demo/bd/mobile/index.html"
+      }
+    },
+    {
+      "name": "CRYSTAL BALL",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/cb/desktop/index.html",
+        "mobile": "demo/cb/mobile/index.html"
+      }
+    },
+    {
+      "name": "Generic EAW Cheeky MOBILE",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/cg/desktop/index.html",
+        "mobile": "demo/cg/mobile/index.html"
+      }
+    },
+    {
+      "name": "CASH SPLASH EAW GAME",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/cs/desktop/index.html",
+        "mobile": "demo/cs/mobile/index.html"
+      }
+    },
+    {
+      "name": "CRACK THE SAFE EAW GAME",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/cts/desktop/index.html",
+        "mobile": "demo/cts/mobile/index.html"
+      }
+    },
+    {
+      "name": "Generic EAW Foxy MOBILE",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/dd/desktop/index.html",
+        "mobile": "demo/dd/mobile/index.html"
+      }
+    },
+    {
+      "name": "Generic EAW Foxy Casino MOBILE",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/fcg/desktop/index.html",
+        "mobile": "demo/fcg/mobile/index.html"
+      }
+    },
+    {
+      "name": "Generic EAW Foxy MOBILE",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/fg/desktop/index.html",
+        "mobile": "demo/fg/mobile/index.html"
+      }
+    },
+    {
+      "name": "Generic EAW Foxy MOBILE",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/fgr/desktop/index.html",
+        "mobile": "demo/fgr/mobile/index.html"
+      }
+    },
+    {
+      "name": "Hook a duck",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/had/desktop/index.html",
+        "mobile": "demo/had/mobile/index.html"
+      }
+    },
+    {
+      "name": "HOOK A DUCK EAW GAME",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "mobile": "demo/hado/mobile/index.html"
+      }
+    },
+    {
+      "name": "LUCKY DIP EAW GAME",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "mobile": "demo/ld/mobile/index.html"
+      }
+    },
+    {
+      "name": "Pumpkin Payout EAW GAME",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "mobile": "demo/pp/mobile/index.html"
+      }
+    },
+    {
+      "name": "ROCKET TO RICHES EAW GAME",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "mobile": "demo/rtr/mobile/index.html"
+      }
+    },
+    {
+      "name": "SPIN TO WIN",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/stwc/desktop/index.html",
+        "mobile": "demo/stwc/mobile/index.html"
+      }
+    },
+    {
+      "name": "SPIN TO WIN",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/stwf/desktop/index.html",
+        "mobile": "demo/stwf/mobile/index.html"
+      }
+    },
+    {
+      "name": "SPIN TO WIN",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/stwfc/desktop/index.html",
+        "mobile": "demo/stwfc/mobile/index.html"
+      }
+    },
+    {
+      "name": "Generic EAW Think MOBILE",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/tg/desktop/index.html",
+        "mobile": "demo/tg/mobile/index.html"
+      }
+    },
+    {
+      "name": "Test of Strength",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/tos/desktop/index.html",
+        "mobile": "demo/tos/mobile/index.html"
+      }
+    },
+    {
+      "name": "TOWIE",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/towie/desktop/index.html",
+        "mobile": "demo/towie/mobile/index.html"
+      }
+    },
+    {
+      "name": "WHEEL OF FORTUNE",
+      "ico": "char_ico.jpg",
+      "fav": "0",
+      "play": {
+        "desktop": "demo/wof/desktop/index.html",
+        "mobile": "demo/wof/mobile/index.html"
+      }
     }
   ]
 }

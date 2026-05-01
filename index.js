@@ -24,7 +24,9 @@ this.showItem = (itemJSON) => {
   HTMLblock += "<div class='project-name'>" + itemJSON.name + "</div><br>";
 
   HTMLblock += "<br><br><div class='project-play'>";
-  HTMLblock += "<a target='_blank' href='" + itemJSON.play + "'>PLAY</a>";
+  HTMLblock += "<a target='_blank' href='" + itemJSON.play.desktop + "'>DESKTOP</a>";
+  HTMLblock += " &nbsp;  &nbsp; | &nbsp;  &nbsp; ";
+  HTMLblock += "<a target='_blank' href='" + itemJSON.play.mobile + "'>MOBILE</a>";
   HTMLblock += "</div>";
 
   HTMLblock += "</div></div>";
