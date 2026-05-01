@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'harryobeserr_squeezedregular';
+    src: url('font/HarryObeseRRSqueezed-webfont.eot');
+    src: url('font/HarryObeseRRSqueezed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/HarryObeseRRSqueezed-webfont.woff2') format('woff2'),
+         url('font/HarryObeseRRSqueezed-webfont.woff') format('woff'),
+         url('font/HarryObeseRRSqueezed-webfont.ttf') format('truetype'),
+         url('font/HarryObeseRRSqueezed-webfont.svg#harryobeserr_squeezedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.whiteText { text-shadow: 	0px 0px 4px #000000, 
+                 			0px 0px 4px #000000, 
+                 			0px 0px 4px #000000, 
+                 			0px 0px 4px #000000, 
+                			0px 0px 8px #000000, 
+                			0px 0px 8px #000000,
+                			0px 0px 8px #000000,                			                			
+                			0px 0px 8px #000000, 
+                			0px 0px 8px #000000,
+                			0px 0px 8px #000000,                			                			
+                			0px 0px 8px #000000 ; 
+            color: #ffffff; font-family:harryobeserr_squeezedregular;
+			filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='black', Positive='true', enabled=true);	
+}
+  
+img{ border: 0px }	
+  
+.prizeText {color: #fd00ff;}
+
+#gameStart {position: absolute; left:0px; top:0px;}
+#gameSpin {position: absolute; left:0px; top:0px; display: none;}
+#gameVideo {position: absolute; left:0px; top:0px; display: none;}
+
+#termsText { font-size: 20px; position: absolute; left: 265px; top: 480px; border-bottom:1px solid white; z-index:300002;}
+#introText { font-size: 64px; position:absolute; left:0px; top:220px; width: 725px; z-index:300001; display: block;}
+#infoText { font-size: 48px; position:absolute; left:0px; top:40px; width: 725px; z-index:300000; display: none;}
+#logo {position: absolute; left: 175px; top: 20px; z-index:300003;}
+#winText {display: none;}
+#notTodayText {display: none;}
+#notLoggedText {display: none;}
+#ErrorText {display: none;}
+#loseText {display: none;}
+
+#loaderHolder {position: absolute; left: 0px; top: 0px; width:725px; height:550px; background-color: #000000; z-index:300005;}
+.active {background: transparent url(images/loader.png) 0px 0px no-repeat; height: 28px; width: 28px; display: none;}
+.pasive {background: transparent url(images/loader.png) -29px 0px no-repeat; height: 28px; width: 28px;}
+#p1 {position: absolute; left: 350px; top: 222px;}
+#p2 {position: absolute; left: 373px; top: 229px;}
+#p3 {position: absolute; left: 386px; top: 248px;}
+#p4 {position: absolute; left: 386px; top: 271px;}
+#p5 {position: absolute; left: 373px; top: 290px;}
+#p6 {position: absolute; left: 350px; top: 297px;}
+
+#p7 {position: absolute; left: 327px; top: 290px;}
+#p8 {position: absolute; left: 314px; top: 271px;}
+#p9 {position: absolute; left: 314px; top: 248px;}
+#p10 {position: absolute; left: 327px; top: 229px;}
+
+#playNow {position: absolute; left: 240px; top: 325px; display: none;}
+#playNowPasive {background: transparent url(images/play_now.png) 0px 0px no-repeat; height: 113px; width: 241px; display: block;}
+#playNowActive {background: transparent url(images/play_now.png) 0px -114px no-repeat; height: 113px; width: 241px; display: none;}
+
+#spinHolder {position: absolute; left: 242px; top: 370px;}
+#spinButton {background: transparent url(images/spin.png) 0px 0px no-repeat; height: 113px; width: 241px; display: block;}
+#spinButtonOn {background: transparent url(images/spin.png) 0px -114px no-repeat; height: 113px; width: 241px; display: none;}
+#spinButtonDown {background: transparent url(images/spin.png) 0px -227px no-repeat; height: 113px; width: 241px; display: none;}

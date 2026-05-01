@@ -1,0 +1,70 @@
+#gameAnimation{ background-color: #7b4bb5 }
+#textCanvas {position: absolute; left: 110px; top: 170px; z-index:300009; }
+
+img{ border: 0px }	
+
+@font-face {
+    font-family: 'futurabold';
+    src: url('font/futura-bold-webfont.eot');
+    src: url('font/futura-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/futura-bold-webfont.woff2') format('woff2'),
+         url('font/futura-bold-webfont.woff') format('woff'),
+         url('font/futura-bold-webfont.ttf') format('truetype'),
+         url('font/futura-bold-webfont.svg#futurabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.whiteText { text-shadow: 2px 2px 5px #000000; color: #ffffff; font-family:futurabold; text-align: center;}
+#prizePhysical {display: block; line-height:150%; font-size: 18px;}
+#prizeCash {display: block; line-height:150%; font-size: 18px;}
+#prizeNonCash {display: block; line-height:150%; font-size: 18px;}
+
+#gameVideo {position: absolute; left:0px; top:0px;}
+
+#termsText { font-size: 16px; z-index:300020; position: absolute; left: 250px; top: 400px;}
+
+#infoText { font-size: 24px; position:absolute; left:0px; top:140px; width:684px; z-index:300000; margin: 0px;}
+#startButton {position: absolute; left: 0px; top: 0px; z-index:300001;}
+#tooltip {position: absolute; left: 365px; top: 70px; display: none;}
+#logo {position: absolute; left: 235px; top: 25px; display: none;}
+#winText {display: none; font-size: 24px; line-height: 200%; display: none;}
+#winTextInsert {text-shadow: 2px 2px 5px rgba(255, 255, 255, 0); color: #ffffff;  font-size: 34px; color: rgba(255, 255, 255, 0); }
+#notTodayText {display: none;}
+#notTodayText {display: none;}
+#notLoggedText {display: none;}
+#ErrorText {display: none;}
+#safeOpen {display: none;}
+
+#gameBg {position: absolute; left: 0px; top: 0px; z-index:300009}
+#glassButton {position: absolute; left: 81px; top: 106px; z-index:300010}
+
+#gameContainer {position: absolute; left: 0px; top: 0px; }
+#loaderHolder {position: absolute; left: 0px; top: 0px; width:1px; height:1px; background-color: #000000; z-index:300055; display: none;}
+
+#p1active {position: absolute; left: 350px; top: 172px;}
+#p2active {position: absolute; left: 373px; top: 179px;}
+#p3active {position: absolute; left: 386px; top: 198px;}
+#p4active {position: absolute; left: 386px; top: 221px;}
+#p5active {position: absolute; left: 373px; top: 240px;}
+#p6active {position: absolute; left: 350px; top: 247px;}
+#p7active {position: absolute; left: 327px; top: 240px;}
+#p8active {position: absolute; left: 314px; top: 221px;}
+#p9active {position: absolute; left: 314px; top: 198px;}
+#p10active {position: absolute; left: 327px; top: 179px;}
+
+#p1pasive {position: absolute; left: 350px; top: 172px;}
+#p2pasive {position: absolute; left: 373px; top: 179px;}
+#p3pasive {position: absolute; left: 386px; top: 198px;}
+#p4pasive {position: absolute; left: 386px; top: 221px;}
+#p5pasive {position: absolute; left: 373px; top: 240px;}
+#p6pasive {position: absolute; left: 350px; top: 247px;}
+#p7pasive {position: absolute; left: 327px; top: 240px;}
+#p8pasive {position: absolute; left: 314px; top: 221px;}
+#p9pasive {position: absolute; left: 314px; top: 198px;}
+#p10pasive {position: absolute; left: 327px; top: 179px;}
+
+#requestAnimation {position: absolute; left: 320px; top: 200px; width:110px; height:110px; z-index:300006; display: none; background: transparent url(images/request_loader.png)}
+
+#playGame {position: absolute; left: 200px; top: 310px; z-index:300013;}
+#playNow {position: absolute; left: 0px; top: 310px; z-index:300051; font-size: 24px; width:684px; text-align: center;}

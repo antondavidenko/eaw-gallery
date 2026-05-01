@@ -1,0 +1,44 @@
+
+@font-face { font-family: Dosis; src: url(dosis.otf);
+}.whiteText { text-shadow: 2px 2px #000000; color: #ffffff; font-family:Dosis;}
+.prizeText {color: #fd00ff;}
+
+#gameVideo {position: absolute; left:0px; top:0px;}
+#termsText { font-size: 16px; position: absolute; left: 265px; top: 470px; border-bottom:1px solid white; z-index:300002;}
+#infoText { font-size: 36px; position:absolute; left:0px; top:40px; width: 725px; z-index:300000; display: none;}
+#startButton {position: absolute; left: 0px; top: 0px; z-index:300001;}
+#tooltip {position: absolute; left: 365px; top: 70px;}
+#logo {position: absolute; left: 235px; top: 25px;}
+#winText {display: none;}
+#notTodayText {display: none;}
+#notLoggedText {display: none;}
+#ErrorText {display: none;}
+
+#loaderHolder {position: absolute; left: 0px; top: 0px; width:725px; height:550px; background-color: #000000; z-index:300005;}
+.active {background: transparent url(loader.png) 0px 0px no-repeat; height: 28px; width: 28px; display: none;}
+.pasive {background: transparent url(loader.png) -29px 0px no-repeat; height: 28px; width: 28px;}
+#p1 {position: absolute; left: 350px; top: 222px;}
+#p2 {position: absolute; left: 373px; top: 229px;}
+#p3 {position: absolute; left: 386px; top: 248px;}
+#p4 {position: absolute; left: 386px; top: 271px;}
+#p5 {position: absolute; left: 373px; top: 290px;}
+#p6 {position: absolute; left: 350px; top: 297px;}
+#p7 {position: absolute; left: 327px; top: 290px;}
+#p8 {position: absolute; left: 314px; top: 271px;}
+#p9 {position: absolute; left: 314px; top: 248px;}
+#p10 {position: absolute; left: 327px; top: 229px;}
+
+#requestAnimation {position: absolute; left: 0px; top: 0px; width:725px; height:550px; z-index:300006;  display: none;}
+.light {background: transparent url(loader.png) 0px 0px no-repeat; height: 28px; width: 28px;}
+#l1 {position: absolute; left: 455px; top: 206px;}
+#l2 {position: absolute; left: 493px; top: 220px;}
+#l3 {position: absolute; left: 510px; top: 260px;}
+#l4 {position: absolute; left: 493px; top: 297px;}
+#l5 {position: absolute; left: 455px; top: 315px;}
+#l6 {position: absolute; left: 417px; top: 297px;}
+#l7 {position: absolute; left: 400px; top: 260px;}
+#l8 {position: absolute; left: 418px; top: 220px;}
+
+#playNow {position: absolute; left: 245px; top: 325px; display: none;}
+#playNowPasive {background: transparent url(play_now.png) 0px 0px no-repeat; height: 98px; width: 229px; display: block;}
+#playNowActive {background: transparent url(play_now.png) 0px -98px no-repeat; height: 98px; width: 229px; display: none;}

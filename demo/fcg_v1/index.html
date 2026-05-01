@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html> 
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title>Generic EAW Foxy Casino</title>
+
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="logic.js"></script>
+		<script type="text/javascript" src="eawclient.js"></script>
+	</head>
+	
+	<body>
+		<div id="loaderHolder">
+			<img src="x.gif" />
+			<div id="p1">
+				<div id="p1active" class="active"><img src="x.gif"/></div>
+				<div id="p1pasive" class="pasive"><img src="x.gif"/></div>
+			</div>
+			<div id="p2">
+				<div id="p2active" class="active"><img src="x.gif"/></div>
+				<div id="p2pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+			<div id="p3">
+				<div id="p3active" class="active"><img src="x.gif"/></div>
+				<div id="p3pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+			<div id="p4">
+				<div id="p4active" class="active"><img src="x.gif"/></div>
+				<div id="p4pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+			<div id="p5">
+				<div id="p5active" class="active"><img src="x.gif"/></div>
+				<div id="p5pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+			<div id="p6">
+				<div id="p6active" class="active"><img src="x.gif"/></div>
+				<div id="p6pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+			<div id="p7">
+				<div id="p7active" class="active"><img src="x.gif"/></div>
+				<div id="p7pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+			<div id="p8">
+				<div id="p8active" class="active"><img src="x.gif"/></div>
+				<div id="p8pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+			<div id="p9">
+				<div id="p9active" class="active"><img src="x.gif"/></div>
+				<div id="p9pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+			<div id="p10">
+				<div id="p10active" class="active"><img src="x.gif"/></div>
+				<div id="p10pasive" class="pasive"><img src="x.gif"/></div>
+			</div>			
+		</div>
+		
+		<div id="playBtn"><a href="#" onclick="onGameStart(); return false;" onmouseover="showPlayMouseOver()" onmouseout="showPlayMouseOut()">
+			<div id="playActive" class="active"><img src="x.gif"/></div>
+			<div id="playPasive" class="pasive"><img src="x.gif"/></div>
+		</a></div>		
+
+		<div style="text-align:center"> 
+			<img src="images/bg.jpg" id="background">		
+			<img src="images/start.png" id="start">
+			<img src="images/end.png" id="end">
+			<img src="images/info.png" id="info">			
+
+			<a href="game.php" target="_blank"> 
+				<p id="termsText" class="tncText"><b>Terms and Conditions Apply</b><p>
+			</a>
+
+			<br>
+			<p id="infoText" class="whiteText">
+				<font id="winText"><font id="winTextInsert" class='prizeText'></font></font>
+				<font id="notTodayText">You’ve already cracked the safe today!<br>But, don’t forget to come back tomorrow to play again…</font>
+				<font id="notLoggedText">Sorry! You need to be logged on to play.<br>(Please make sure your browser accepts 3rd party cookies)</font>
+				<font id="ErrorText">An error occurred when we tried to get your prize!<br>Please try again later...</font>
+			</p>
+
+			<div id="playNow"><a href="#" onclick="playNow(); return false;" onmouseover="showMouseOver()" onmouseout="showMouseOut()">
+				<div id="playNowActive" class="active"><img src="x.gif"/></div>
+				<div id="playNowPasive" class="pasive"><img src="x.gif"/></div>
+			</a></div>		
+		</div> 
+	</body> 
+</html>

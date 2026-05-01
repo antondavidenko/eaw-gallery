@@ -1,0 +1,102 @@
+﻿img {
+  border: 0;
+}
+
+body, div, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Arial";
+  font-size: 12px;
+  background-color:#141a1f;
+  color: #97a6b5;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style-type: none;
+}
+
+.ico {
+  float: left;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.clr {
+  clear: both;
+}
+
+table.center {
+  width: 100%;
+  margin: 0;
+  border: 0;
+}
+
+table.center td {
+  padding: 5px 0 0 0;
+}
+
+#wrapper-body {
+  width: 1022px;
+  text-align: left;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#wrapper-body-inner {
+  margin: 0 7px 0 7px;
+}
+
+#wrapper-head {
+  padding-bottom: 18px;
+}
+
+#wrapper-logo {
+  width: 1024px;
+  height: 264px;
+  background: transparent url('./images/logo.jpg') no-repeat scroll left top;
+}
+
+#wrapper-content {
+  font-size: 12px;
+}
+
+#wrapper-content #wrapper-right {
+  width: 518px;
+  float: left;
+  margin-right: -7px;
+}
+
+#wrapper-content #wrapper-right-inner {
+  margin-right: 7px;
+  width: 320px;
+  height: 120px;
+  float: left;
+}
+
+.project {
+  width: 300px;
+  float: left;
+  margin: 10px;
+  background-color:#141a1f;
+}
+
+#content {
+  width: 1020px;
+  height: 564px;
+  background-color:#101418;
+}
+
+.play {
+  margin-left: 200px;
+}

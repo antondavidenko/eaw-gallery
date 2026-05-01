@@ -1,0 +1,65 @@
+canvas { background-color: #c31287; }
+
+@font-face { font-family: Dosis; src: url(./font/dosis.otf);}
+.whiteText { text-shadow: 2px 2px #000000; color: #ffffff; font-family:Dosis;}
+.prizeText {color: #ffff00;}
+
+#gameVideo {position: absolute; left:0px; top:0px;}
+
+#termsText1 { font-size: 16px; z-index:300002; position: absolute; left: 85px; top: 515px;}
+#termsText2 { font-size: 16px; z-index:300002; position: absolute; left: 85px; top: 515px;}
+
+.tncClassPlyNow { position: absolute; left: 65px; top: 490px; border-bottom:1px solid #d0287e; color: #d0287e; font-family:Dosis;}
+.tncClassGame { position: absolute; left: 265px; top: 490px; border-bottom:1px solid white; color: #ffffff; font-family:Dosis;}
+
+#infoText { font-size: 36px; position:absolute; left:0px; top:40px; width: 750px; z-index:300000; display: none;}
+#startButton {position: absolute; left: 0px; top: 0px; z-index:300001;}
+#tooltip {position: absolute; left: 365px; top: 70px; display: none;}
+#logo {position: absolute; left: 235px; top: 25px; display: none;}
+#winText {display: none;}
+#notTodayText {display: none;}
+#notLoggedText {display: none;}
+#ErrorText {display: none;}
+#safeOpen {display: none;}
+
+#man1Button {position: absolute; left: 220px; top: 120px; z-index:300010;}
+#man2Button {position: absolute; left: 400px; top: 120px; z-index:300011;}
+#man3Button {position: absolute; left: 580px; top: 120px; z-index:300012;}
+#gameContainer {position: absolute; left: 0px; top: 0px; }
+#loaderHolder {position: absolute; left: 0px; top: 0px; width:1px; height:1px; background-color: #000000; z-index:300055; display: none;}
+
+#p1active {position: absolute; left: 350px; top: 222px;}
+#p2active {position: absolute; left: 373px; top: 229px;}
+#p3active {position: absolute; left: 386px; top: 248px;}
+#p4active {position: absolute; left: 386px; top: 271px;}
+#p5active {position: absolute; left: 373px; top: 290px;}
+#p6active {position: absolute; left: 350px; top: 297px;}
+#p7active {position: absolute; left: 327px; top: 290px;}
+#p8active {position: absolute; left: 314px; top: 271px;}
+#p9active {position: absolute; left: 314px; top: 248px;}
+#p10active {position: absolute; left: 327px; top: 229px;}
+
+#p1pasive {position: absolute; left: 350px; top: 222px;}
+#p2pasive {position: absolute; left: 373px; top: 229px;}
+#p3pasive {position: absolute; left: 386px; top: 248px;}
+#p4pasive {position: absolute; left: 386px; top: 271px;}
+#p5pasive {position: absolute; left: 373px; top: 290px;}
+#p6pasive {position: absolute; left: 350px; top: 297px;}
+#p7pasive {position: absolute; left: 327px; top: 290px;}
+#p8pasive {position: absolute; left: 314px; top: 271px;}
+#p9pasive {position: absolute; left: 314px; top: 248px;}
+#p10pasive {position: absolute; left: 327px; top: 229px;}
+
+#requestAnimation {position: absolute; left: 400px; top: 200px; width:110px; height:110px; z-index:300006; display: none; background: transparent url(images/request_loader.png)}
+#l1 {position: absolute; left: 100px; top: 110px;}
+#l2 {position: absolute; left: 100px; top: 250px;}
+#l3 {position: absolute; left: 200px; top: 10px;}
+#l4 {position: absolute; left: 200px; top: 350px;}
+#l5 {position: absolute; left: 360px; top: 10px;}
+#l6 {position: absolute; left: 360px; top: 350px;}
+#l7 {position: absolute; left: 460px; top: 110px;}
+#l8 {position: absolute; left: 460px; top: 250px;}
+
+#playNow {position: absolute; left: 0px; top: 310px; z-index:300051; font-size: 36px; width:750px;}
+#playNowPasive {background: transparent url(images/play_now.png) 0px 0px no-repeat; height: 98px; width: 229px; display: block;}
+#playNowActive {background: transparent url(images/play_now.png) 0px -98px no-repeat; height: 98px; width: 229px; display: none;}

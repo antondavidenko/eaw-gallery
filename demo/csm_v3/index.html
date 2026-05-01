@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+		
+		<script type="text/javascript" src="http://media.bingosys.net/stage/platform/_mobile-assets/shared/scripts/mobile-interface-1.0.0.js"></script>		
+		<title>CASH SPLASH EAW GAME</title>
+
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<script type="text/javascript" src='./lib/quintus/quintus.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_sprites.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_scenes.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_anim.js'></script>
+		<script type="text/javascript" src="./lib/eawclientm.js"></script>
+		<script type="text/javascript" src="./lib/imgMoviePlayer.js"></script>
+
+		<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+		<script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
+		<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
+		<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+		<script src="http://code.createjs.com/soundjs-0.5.2.min.js"></script>
+		<script src="import.js"></script>		
+		
+		<script type="text/javascript" src='gamemodel.js'></script>
+		<script type="text/javascript" src='gameview.js'></script>
+		<script type="text/javascript" src='gameviewscale.js'></script>
+		<script type="text/javascript" src="logic.js"></script>
+	</head>
+	
+	<body style="text-align:center">
+
+		<div id="loaderHolder">
+			<div id="preloaderAnimation">
+				<img src="images/x.gif" width="1" height="1">
+			</div>	
+				
+			<img src="images/x.gif" />
+				<img id="p1active" class="active" src="images/light.png"/>
+				<img id="p1pasive" class="pasive" src="images/dark.png"/>
+				<img id="p2active" class="active" src="images/light.png"/>
+				<img id="p2pasive" class="pasive" src="images/dark.png"/>
+				<img id="p3active" class="active" src="images/light.png"/>
+				<img id="p3pasive" class="pasive" src="images/dark.png"/>
+				<img id="p4active" class="active" src="images/light.png"/>
+				<img id="p4pasive" class="pasive" src="images/dark.png"/>
+				<img id="p5active" class="active" src="images/light.png"/>
+				<img id="p5pasive" class="pasive" src="images/dark.png"/>
+				<img id="p6active" class="active" src="images/light.png"/>
+				<img id="p6pasive" class="pasive" src="images/dark.png"/>
+				<img id="p7active" class="active" src="images/light.png"/>
+				<img id="p7pasive" class="pasive" src="images/dark.png"/>
+				<img id="p8active" class="active" src="images/light.png"/>
+				<img id="p8pasive" class="pasive" src="images/dark.png"/>
+				<img id="p9active" class="active" src="images/light.png"/>
+				<img id="p9pasive" class="pasive" src="images/dark.png"/>
+				<img id="p10active" class="active" src="images/light.png"/>
+				<img id="p10pasive" class="pasive" src="images/dark.png"/>
+			</div>
+		</div>
+
+		<audio id="trackAudio" preload="false">
+			<source src="snd/theme.mp3" type="audio/mpeg" id="trackSrc" />
+		</audio>
+		
+		<audio id="sndChanel" preload="false">
+			<source src="snd/elektroproleter.mp3" type="audio/mpeg" id="soundSrc" />
+		</audio>
+		
+		<div id="gameContainer" style="text-align:center"> 
+			<div id="gameVideo">
+				<canvas id='gameAnimation'></canvas>
+				<canvas id="canvas" width="750" height="550"></canvas>
+			</div>
+
+			<div id="state_before_play">
+				<a href="#" onclick="onLogoStart(); return false;">
+					<img src="images/x.gif" width="1" height="1" id="startLogoButton">
+				</a>
+				<p id="startText" class="whiteText">TOUCH TO PLAY!</p>
+			</div>
+			
+			<div id="state_play_now">
+				<a href="#" onclick="onGameStart(); return false;">
+					<img src="images/x.gif" width="1" height="1" id="startGameButton">
+				</a>
+				
+				<div id="requestAnimation">
+					<img src="images/x.gif" width="1" height="1">
+				</div>				
+			</div>
+
+			<div id="state_game">
+			</div>			
+			
+			<a href="cashsplash.php" target="_blank"> 
+				<img id="termsText" src="images/tnc.png"/>
+			</a>
+			
+			<div id="state_game_end">			
+				<img id="winImage" src="images/you_win.png"/>
+				<p id="infoText" class="whiteText">
+					<font id="winText">Congratulations,<br>you’ve won <font id="winTextInsert" class='prizeText'></font>.<br>Come back tomorrow<br>for another splash prize</font>
+					<font id="notTodayText">You’ve already play today!<br>But, don’t forget to<br>come back tomorrow<br>to splash again…</font>
+					<font id="notLoggedText">Sorry! You need to<br>be logged on to play.<br>(Please make sure<br>your browser accepts<br>3rd party cookies)</font>
+					<font id="ErrorText">An error occurred<br>when we tried<br>to get your prize!<br>Please try again later...</font>
+				</p>
+				<p id="playNow" class="whiteText">Select the Games link below<br>to play one of me fab casino games!</p>				
+			</div>				
+		</div> 
+	</body> 
+</html>

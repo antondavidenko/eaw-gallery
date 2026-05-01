@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'harryobeserr_squeezedregular';
+    src: url('font/HarryObeseRRSqueezed-webfont.eot');
+    src: url('font/HarryObeseRRSqueezed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/HarryObeseRRSqueezed-webfont.woff2') format('woff2'),
+         url('font/HarryObeseRRSqueezed-webfont.woff') format('woff'),
+         url('font/HarryObeseRRSqueezed-webfont.ttf') format('truetype'),
+         url('font/HarryObeseRRSqueezed-webfont.svg#harryobeserr_squeezedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.whiteText { color: #ffffff; font-family:harryobeserr_squeezedregular;}
+.tncText { color: #ffffff; font-family:Arial;}
+.prizeText {color: #FFFFFF; text-shadow: 2px 2px #000000;}
+
+#gameVideo {position: absolute; left:0px; top:0px;}
+#termsText { font-size: 9px; position: absolute; left: 410px; top: 325px; z-index:300002;}
+#infoText { font-size: 36px; position:absolute; left:100px; top:125px; width: 350px; z-index:300000; display: none;}
+#startButton {position: absolute; left: 0px; top: 0px; z-index:300001;}
+
+#background {position: absolute; left: 0px; top: 0px;}
+#start {position: absolute; left: 0px; top: 0px;}
+#info {position: absolute; left: 0px; top: 0px;}
+#end {position: absolute; left: 0px; top: 0px;}
+
+#winText {display: none;}
+#notTodayText {display: none;}
+#notLoggedText {display: none;}
+#ErrorText {display: none;}
+
+#loaderHolder {position: absolute; left: 0px; top: 0px; width:550px; height:350px; background-color: #000000; z-index:300005;}
+.active {background: transparent url(images/loader.png) 0px 0px no-repeat; height: 28px; width: 28px; display: none;}
+.pasive {background: transparent url(images/loader.png) -29px 0px no-repeat; height: 28px; width: 28px;}
+#p1 {position: absolute; left: 250px; top: 122px;}
+#p2 {position: absolute; left: 273px; top: 129px;}
+#p3 {position: absolute; left: 286px; top: 148px;}
+#p4 {position: absolute; left: 286px; top: 171px;}
+#p5 {position: absolute; left: 273px; top: 190px;}
+#p6 {position: absolute; left: 250px; top: 197px;}
+#p7 {position: absolute; left: 227px; top: 190px;}
+#p8 {position: absolute; left: 214px; top: 171px;}
+#p9 {position: absolute; left: 214px; top: 148px;}
+#p10 {position: absolute; left: 227px; top: 129px;}
+
+#playNow {position: absolute; left: 175px; top: 275px; display: none;}
+#playNowPasive {background: transparent url(images/play.png) 0px 0px no-repeat; height: 60px; width: 204px; display: block;}
+#playNowActive {background: transparent url(images/play.png) 0px -60px no-repeat; height: 60px; width: 204px; display: none;}
+
+#playBtn {position: absolute; left: 175px; top: 275px; z-index:300004;}
+#playPasive {background: transparent url(images/claim.png) 0px 0px no-repeat; height: 60px; width: 204px; display: block;}
+#playActive {background: transparent url(images/claim.png) 0px -60px no-repeat; height: 60px; width: 204px; display: none;}

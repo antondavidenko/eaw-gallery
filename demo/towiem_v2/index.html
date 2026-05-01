@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+		
+		<script type="text/javascript" src="http://media.bingosys.net/stage/platform/_mobile-assets/shared/scripts/mobile-interface-1.0.0.js"></script>		
+		<title>TOWIE</title>
+
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<script type="text/javascript" src='./lib/quintus/quintus.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_sprites.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_scenes.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_anim.js'></script>
+		
+		<script type="text/javascript" src="./lib/canvastext.js"></script>
+		<script type="text/javascript" src="./lib/eawclient.js"></script>
+		<script type="text/javascript" src="./lib/streamview.js"></script>
+		<script type="text/javascript" src="./lib/glassview.js"></script>
+		
+		<script type="text/javascript" src='gamemodel.js'></script>
+		<script type="text/javascript" src='gameview.js'></script>
+		<script type="text/javascript" src='gameviewscale.js'></script>
+		<script type="text/javascript" src="game.js"></script>
+	</head>
+	
+	<body style="text-align:center">
+
+		<audio id="sndTrack" loop><source src="snd/track.mp3" type="audio/mpeg"/></audio>
+		
+		<audio id="sndEffect"><source src="snd/effect.mp3" type="audio/mpeg"/></audio>		
+	
+		<div id="loaderHolder">
+			<img id="p1active" class="active" src="images/loader_light.png"/>
+			<img id="p1pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p2active" class="active" src="images/loader_light.png"/>
+			<img id="p2pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p3active" class="active" src="images/loader_light.png"/>
+			<img id="p3pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p4active" class="active" src="images/loader_light.png"/>
+			<img id="p4pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p5active" class="active" src="images/loader_light.png"/>
+			<img id="p5pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p6active" class="active" src="images/loader_light.png"/>
+			<img id="p6pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p7active" class="active" src="images/loader_light.png"/>
+			<img id="p7pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p8active" class="active" src="images/loader_light.png"/>
+			<img id="p8pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p9active" class="active" src="images/loader_light.png"/>
+			<img id="p9pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p10active" class="active" src="images/loader_light.png"/>
+			<img id="p10pasive" class="pasive" src="images/loader_dark.png"/>
+		</div>
+	
+		<div id="gameContainer" style="text-align:center"> 
+		
+			<div id="state_play_now">
+				<div id="playGame"><a href="#" onclick="onGameStart(); return false;">
+					<img id="startButton" src="images/playnow_btn.png"/>				
+				</a></div>				
+			</div>
+
+			<div id="state_intro">
+			</div>			
+			
+			<div id="state_game">
+				<img src="images/x.gif" width="684" height="454" id="gameBg">
+				<a href="#" onclick="onGlassButton(); return false;"><img src="images/x.gif" width="200" height="280" id="glassButton"></a>
+	
+				<div id="requestAnimation">
+					<img src="images/x.gif" width="1" height="1">
+				</div>					
+			</div>
+			
+			<div id="state_game_end">
+				<canvas id="textCanvas" ></canvas>			
+				<p id="infoText" class="whiteText">
+					<font id="winText">YOU'VE WON<br>
+						<font id="winTextInsert"></font><br>
+						<font id="prizePhysical"><br>delivered in 14 days</font>
+						<font id="prizeCash"><br>credited within 24 hours</font>
+						<font id="prizeNonCash"><br>credited shortly</font>
+					</font>
+					<font id="notTodayText">You’ve already played for today!<br>But, don’t forget to come back tomorrow to play again…</font>
+					<font id="notLoggedText">Sorry! You need to be logged on to play.<br>(Please make sure your browser accepts 3rd party cookies)</font>
+					<font id="ErrorText">An error occurred when we tried to get your prize!<br>Please try again later...</font>
+				</p>	
+				
+				<p id="playNow" class="whiteText">Select the Games link below<br>to play one of me fab casino games!</p>
+			</div>
+
+			<canvas id='gameAnimation'></canvas>
+			
+			<a href="cracktheloader.php" target="_blank"> 
+				<img id="termsText" src="images/tnc.png"/>
+			</a>			
+		</div> 
+	</body> 
+</html>

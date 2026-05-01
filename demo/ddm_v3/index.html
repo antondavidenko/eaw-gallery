@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html> 
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title>Generic EAW Foxy MOBILE</title>
+
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+		<script src='./lib/quintus.js'></script>
+		<script src='./lib/quintus_sprites.js'></script>
+		<script src='./lib/quintus_scenes.js'></script>			
+		<script src='./lib/quintus_touch.js'></script>				
+		<script src='./lib/quintus_ui.js'></script>		
+		
+		<script type="text/javascript" src='gamemodel.js'></script>
+		<script type="text/javascript" src='gameview.js'></script>		
+		<script type="text/javascript" src="logic.js"></script>
+		<script type="text/javascript" src="eawclient.js"></script>
+	</head>
+	
+	<body>
+		<div id="loaderHolder">
+			<img src="images/x.gif" />
+				<img id="p1active" class="active" src="images/pin_light.png"/>
+				<img id="p1pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p2active" class="active" src="images/pin_light.png"/>
+				<img id="p2pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p3active" class="active" src="images/pin_light.png"/>
+				<img id="p3pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p4active" class="active" src="images/pin_light.png"/>
+				<img id="p4pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p5active" class="active" src="images/pin_light.png"/>
+				<img id="p5pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p6active" class="active" src="images/pin_light.png"/>
+				<img id="p6pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p7active" class="active" src="images/pin_light.png"/>
+				<img id="p7pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p8active" class="active" src="images/pin_light.png"/>
+				<img id="p8pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p9active" class="active" src="images/pin_light.png"/>
+				<img id="p9pasive" class="pasive" src="images/pin_dark.png"/>
+				<img id="p10active" class="active" src="images/pin_light.png"/>
+				<img id="p10pasive" class="pasive" src="images/pin_dark.png"/>
+			</div>
+		</div>
+		
+		<a href="#" onclick="onGameStart(); return false;">
+			<img  src="images/claim.png" id="playBtn"/>
+		</a>		
+		
+		<div class="gameContainer"> 
+			<div id="gameVideo">
+				<canvas id='gameAnimation'></canvas>
+			</div>
+			
+			<a href="game.php" target="_blank"> 
+				<p id="termsText" class="tncText"><b>Terms and Conditions Apply</b><p>
+			</a>
+
+			<p id="playNow" class="whiteText">Select the Games link below<br>to play one of me fab casino games!</p>		
+		</div> 
+	</body> 
+</html>

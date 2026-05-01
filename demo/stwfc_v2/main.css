@@ -1,0 +1,57 @@
+
+@font-face {
+    font-family: 'uomobold';
+    src: url('font/uomo-webfont.eot');
+    src: url('font/uomo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/uomo-webfont.woff2') format('woff2'),
+         url('font/uomo-webfont.woff') format('woff'),
+         url('font/uomo-webfont.ttf') format('truetype'),
+         url('font/uomo-webfont.svg#uomobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.whiteText { text-shadow: 	0px 0px 4px #000000, 
+                			0px 0px 8px #000000 ; 
+            color: #ffffff; font-family:uomobold;
+			filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='black', Positive='true', enabled=true);	
+}
+  
+img{ border: 0px }	
+  
+.prizeText {color: #e3b600;}
+
+#gameStart {position: absolute; left:0px; top:0px;}
+#gameSpin {position: absolute; left:0px; top:0px; display: none;}
+#gameVideo {position: absolute; left:0px; top:0px; display: none;}
+
+#termsText { font-size: 16px; z-index:300025; position: absolute; left: 270px; top: 518px;}
+#infoText { font-size: 36px; position:absolute; left:0px; top:40px; width: 725px; z-index:300000; display: none;}
+#winText {display: none;}
+#notTodayText {display: none;}
+#notLoggedText {display: none;}
+#ErrorText {display: none;}
+#loseText {display: none;}
+
+#loaderHolder {position: absolute; left: 0px; top: 0px; width:725px; height:550px; background-color: #000000; z-index:300035;}
+.active {background: transparent url(images/loader.png) 0px 0px no-repeat; height: 28px; width: 28px; display: none;}
+.pasive {background: transparent url(images/loader.png) -29px 0px no-repeat; height: 28px; width: 28px;}
+#p1 {position: absolute; left: 350px; top: 222px;}
+#p2 {position: absolute; left: 373px; top: 229px;}
+#p3 {position: absolute; left: 386px; top: 248px;}
+#p4 {position: absolute; left: 386px; top: 271px;}
+#p5 {position: absolute; left: 373px; top: 290px;}
+#p6 {position: absolute; left: 350px; top: 297px;}
+
+#p7 {position: absolute; left: 327px; top: 290px;}
+#p8 {position: absolute; left: 314px; top: 271px;}
+#p9 {position: absolute; left: 314px; top: 248px;}
+#p10 {position: absolute; left: 327px; top: 229px;}
+
+#playNow {position: absolute; left: 263px; top: 390px; display: none;}
+#playNowPasive {background: transparent url(images/play_now.png) 0px 0px no-repeat; height: 59px; width: 190px; display: block;}
+#playNowActive {background: transparent url(images/play_now.png) 0px -59px no-repeat; height: 59px; width: 190px; display: none;}
+
+#spinHolder {position: absolute; left: 275px; top: 390px;}
+#spinButton {background: transparent url(images/spin.png) 0px 0px no-repeat; height: 59px; width: 168px; display: block;}
+#spinButtonOn {background: transparent url(images/spin.png) 0px -59px no-repeat; height: 59px; width: 168px; display: none;}

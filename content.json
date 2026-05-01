@@ -1,0 +1,40 @@
+{
+  "content": [
+    {
+      "name": "Character constructor tool",
+      "ico": "char_ico.jpg",
+      "fav": "1",
+      "play": "./demo/char_v6/"
+    },
+    {
+      "name": "Transformers slot machine",
+      "ico": "tf_slot_ico.jpg",
+      "fav": "1",
+      "play": "./demo/tfslot_v3/"
+    },
+    {
+      "name": "Hunters challenge",
+      "ico": "arpg_ico.jpg",
+      "fav": "1",
+      "play": "./demo/arpg_v8/"
+    },
+    {
+      "name": "RAN",
+      "ico": "ran_ico.jpg",
+      "fav": "1",
+      "play": "./demo/ran_v6/"
+    },
+    {
+      "name": "Mercenaries Guild",
+      "ico": "mg_ico.jpg",
+      "fav": "1",
+      "play": "./demo/mg_v7/"
+    },
+    {
+      "name": "Ice Rink Site",
+      "ico": "ice_rink_site_ico.jpg",
+      "fav": "0",
+      "play": "./demo/mg_v7/"
+    }
+  ]
+}

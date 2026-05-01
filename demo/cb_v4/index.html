@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+		
+		<script type="text/javascript" src="http://media.bingosys.net/stage/platform/_mobile-assets/shared/scripts/mobile-interface-1.0.0.js"></script>		
+		<title>CRYSTAL BALL</title>
+
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<script type="text/javascript" src='./lib/quintus/quintus.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_sprites.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_scenes.js'></script>
+		<script type="text/javascript" src='./lib/quintus/quintus_anim.js'></script>
+		
+		<script type="text/javascript" src="./lib/sphereFilter.js"></script>
+		<script type="text/javascript" src="./lib/textCanvas.js"></script>
+		<script type="text/javascript" src="./lib/eawclient.js"></script>
+		<script type="text/javascript" src="./lib/imgMoviePlayer.js"></script>		
+		
+		<script type="text/javascript" src='gamemodel.js'></script>
+		<script type="text/javascript" src='gameview.js'></script>
+		<script type="text/javascript" src="game.js"></script>
+	</head>
+	
+	<body style="text-align:center">
+
+		<div id="loaderHolder">
+			<img id="p1active" class="active" src="images/loader_light.png"/>
+			<img id="p1pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p2active" class="active" src="images/loader_light.png"/>
+			<img id="p2pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p3active" class="active" src="images/loader_light.png"/>
+			<img id="p3pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p4active" class="active" src="images/loader_light.png"/>
+			<img id="p4pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p5active" class="active" src="images/loader_light.png"/>
+			<img id="p5pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p6active" class="active" src="images/loader_light.png"/>
+			<img id="p6pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p7active" class="active" src="images/loader_light.png"/>
+			<img id="p7pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p8active" class="active" src="images/loader_light.png"/>
+			<img id="p8pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p9active" class="active" src="images/loader_light.png"/>
+			<img id="p9pasive" class="pasive" src="images/loader_dark.png"/>
+			<img id="p10active" class="active" src="images/loader_light.png"/>
+			<img id="p10pasive" class="pasive" src="images/loader_dark.png"/>
+		</div>
+
+		<audio id="trackAudio" preload="false" loop>
+            <source src="snd/track.mp3" type="audio/mpeg" id="trackAudio" />
+		</audio>
+		
+		<div id="gameContainer" style="text-align:center"> 
+			<div id="state_play_now">
+				<p id="introText" class="whiteText">Read your fortune<br>and claim your prize!</p>
+				<div id="playGame"><a href="#" onclick="onGameStart(); return false;" onmouseover="gameStartOver()" onmouseout="gameStartOut()">
+					<div id="playGameActive" class="active"><img src="images/x.gif"/></div>
+					<div id="playGamePasive" class="pasive"><img src="images/x.gif"/></div>					
+				</a></div>
+			</div>
+			
+			<div id="state_video">
+				<video id="gameVideo" width="750" height="550">
+					<source src="video/intro.mp4" type="video/mp4" id="main_channel_mp4">
+					<source src="video/intro.ogv" type="video/ogg" id="main_channel_ogg">
+				</video>			
+			</div>
+			
+			<div id="state_game">
+				<p id="stepText" class="whiteText">Step inside to reveal your fortune</p>
+				<div id="hitItBtn"><a href="#" onclick="onPush(); return false;" onmouseover="hitItBtnOver()" onmouseout="hitItBtnOut()">
+					<div id="hitItBtnActive" class="active"><img src="images/x.gif"/></div>
+					<div id="hitItBtnPasive" class="pasive"><img src="images/x.gif"/></div>					
+				</a></div>				
+			</div>
+			
+			<div id="state_video_end">
+				<video id="gameVideoEnd" width="750" height="550">
+					<source src="video/ending.mp4" type="video/mp4" id="main_channel_mp4">
+					<source src="video/ending.ogv" type="video/ogg" id="main_channel_ogg">
+				</video>			
+			</div>			
+			
+			<div id="state_game_end">
+				<p id="infoText" class="whiteText">
+					<font id="winText">Congratulations!<br>You've won <font id="winTextInsert" class='prizeText'></font>!<br>Your prize will be credited shortly.</font>
+					<font id="notTodayText">You’ve already played for today!<br>But, don’t forget to come back tomorrow to play again…</font>
+					<font id="notLoggedText">Sorry! You need to be logged on to play.<br>(Please make sure your browser accepts 3rd party cookies)</font>
+					<font id="ErrorText">An error occurred when we tried to get your prize!<br>Please try again later...</font>
+				</p>	
+				
+				<div id="playNow"><a href="#" onclick="playNow(); return false;" onmouseover="showMouseOver()" onmouseout="showMouseOut()">
+					<div id="playNowActive" class="active"><img src="images/x.gif"/></div>
+					<div id="playNowPasive" class="pasive"><img src="images/x.gif"/></div>
+				</a></div>
+
+			</div>
+			
+			<canvas id='gameAnimation'></canvas>
+			<canvas id="textObject" width="750" height="550"></canvas>
+            <canvas id="sphereObj" width="750" height="550"></canvas>			
+			
+			<a href="cracktheloader.php" target="_blank"> 
+				<img id="termsText" src="images/tnc.png"/></div>
+			</a>			
+		</div> 
+	</body> 
+</html>
