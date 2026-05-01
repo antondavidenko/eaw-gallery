@@ -21,12 +21,10 @@ this.showItem = (itemJSON) => {
   const ico_URL = ICO_FOLDER + itemJSON.ico;
   HTMLblock += "<div class='project'><div class='content'>"
   HTMLblock += "<div class='ico'><img src='" + ico_URL + "'></div>"
-  HTMLblock += itemJSON.name + "<br>";
+  HTMLblock += "<div class='project-name'>" + itemJSON.name + "</div><br>";
 
-  HTMLblock += "<br><br><div class='play'>";
+  HTMLblock += "<br><br><div class='project-play'>";
   HTMLblock += "<a target='_blank' href='" + itemJSON.play + "'>PLAY</a>";
-  HTMLblock += " &nbsp;  &nbsp; | &nbsp;  &nbsp; ";
-  HTMLblock += "<a target='_blank' href='" + itemJSON.git + "'>GIT</a>";
   HTMLblock += "</div>";
 
   HTMLblock += "</div></div>";
