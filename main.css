@@ -59,8 +59,9 @@ body {
 
 #device-selector {
   text-align: center;
-  margin: 10px 0;
-  font-size: 14px;
+  float: right;
+  margin-top: -70px;
+  margin-right: -18px;
 }
 
 #device-selector span {
@@ -69,11 +70,5 @@ body {
 
 #device-selector .clickable {
   cursor: pointer;
-  color: #ffffff;
-}
-
-#device-selector .selected {
-  font-weight: bold;
-  color: #ffffff;
 }
 

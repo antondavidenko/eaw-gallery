@@ -1,9 +1,12 @@
 const ICO_FOLDER = "./images/content/";
 
 this.initIndexScripts = () => {
-  this.mode = 'desktop';
-  this.loadContent("./content.json", this.showContent);
-  document.getElementById("mobile-selector").addEventListener('click', () => this.switchMode('mobile'));
+  this.loadContent("./content.json", () => {
+    this.showContent();
+    this.switchMode('desktop');
+  });
+  document.getElementById("mobile-selector").addEventListener('click', () => this.switchMode('desktop'));
+  document.getElementById("desktop-selector").addEventListener('click', () => this.switchMode('mobile'));
 }
 
 this.loadContent = (fileName, callback) => {
@@ -11,19 +14,19 @@ this.loadContent = (fileName, callback) => {
   $.ajax({ url: fileName, dataType: 'json', success: (json) => { this.content = json.content; callback(json.content); } });
 }
 
-this.showContent = (contentJSON) => {
+this.showContent = () => {
   document.getElementById("content").innerHTML = "";
-  for (let i in contentJSON) {
-    document.getElementById("content").innerHTML += this.showItem(contentJSON[i]);
+  for (let i in this.content) {
+    document.getElementById("content").innerHTML += this.showItem(this.content[i], i);
   }
 }
 
-this.showItem = (itemJSON) => {
+this.showItem = (itemJSON, id) => {
   let HTMLblock = "";
   const ico_URL = ICO_FOLDER + itemJSON.ico;
-  HTMLblock += "<div class='project'><div class='content'>"
+  HTMLblock += `<div class='project' id='projectId${id}'><div class='content'>`
   HTMLblock += "<div class='project-name'>" + itemJSON.name + "</div><br>";
-  HTMLblock += `<a target='_blank' href='${ this.mode === 'desktop' ? itemJSON.play.desktop : itemJSON.play.mobile }'>`;
+  HTMLblock += "<a target='_blank' href=''>";
     HTMLblock += "<div class='ico'><img src='" + ico_URL + "'></div>"
   HTMLblock += "</a>";
   HTMLblock += "</div>";
@@ -43,12 +46,15 @@ this.switchMode = (mode) => {
     unselectedSelector = document.getElementById("desktop-selector");
   }
 
-  selectedSelector.classList.add('selected');
-  selectedSelector.classList.remove('clickable');
-  unselectedSelector.classList.remove('selected');
-  unselectedSelector.classList.add('clickable');
-  selectedSelector.removeEventListener('click', () => this.switchMode(mode !== 'desktop' ? 'mobile' : 'desktop'));
-  unselectedSelector.addEventListener('click', () => this.switchMode(mode !== 'desktop' ? 'desktop' : 'mobile'));
-  
-  this.showContent(this.content);
+  unselectedSelector.style.display = "none";
+  selectedSelector.style.display = "block";
+
+  for (let i in this.content) {
+    const elemeant = document.getElementById(`projectId${i}`);
+    if ( elemeant ) {
+      const {desktop, mobile} = this.content[i].play;
+      const playLink = this.mode === 'desktop' ? desktop ? desktop : mobile : mobile;
+      elemeant.querySelector("a").href = playLink;
+    }
+  }
 }
