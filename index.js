@@ -26,9 +26,7 @@ this.showItem = (itemJSON, id) => {
   const ico_URL = ICO_FOLDER + itemJSON.ico;
   HTMLblock += `<div class='project' id='projectId${id}'><div class='content'>`
   HTMLblock += "<div class='project-name'>" + itemJSON.name + "</div><br>";
-  HTMLblock += "<a target='_blank' href=''>";
-    HTMLblock += "<div class='ico'><img src='" + ico_URL + "'></div>"
-  HTMLblock += "</a>";
+  HTMLblock += "<span class='ico clickable'><img src='" + ico_URL + "'></span>"
   HTMLblock += "</div>";
 
   HTMLblock += "</div></div>";
@@ -50,11 +48,21 @@ this.switchMode = (mode) => {
   selectedSelector.style.display = "block";
 
   for (let i in this.content) {
-    const elemeant = document.getElementById(`projectId${i}`);
-    if ( elemeant ) {
-      const {desktop, mobile} = this.content[i].play;
-      const playLink = this.mode === 'desktop' ? desktop ? desktop : mobile : mobile;
-      elemeant.querySelector("a").href = playLink;
+    const element = document.getElementById(`projectId${i}`);
+    if ( element ) {
+      element.querySelector(".clickable").addEventListener('click', () => {
+        const {desktop, mobile} = this.content[i].play;
+        const playLink = this.mode === 'desktop' ? desktop ? desktop : mobile : mobile;
+        this.showGame(playLink);
+      });
     }
   }
+}
+
+this.showGame = (game) => {
+  const viewer = document.getElementById("desktop-viewer");
+  viewer.src = game;
+  viewer.style.display = "block";
+  document.getElementById("content").style.display = "none";
+  document.getElementById("device-selector").style.display = "none";
 }

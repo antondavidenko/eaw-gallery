@@ -30,7 +30,7 @@ body {
 
 #logo {
   width: 1024px;
-  height: 264px;
+  height: 128px;
   background: transparent url('./images/logo.jpg') no-repeat scroll left top;
 }
 
@@ -49,6 +49,13 @@ body {
   padding: 10px;
 }
 
+#desktop-viewer {
+  display: none;
+  margin: 0 auto;
+  width: 750px;
+  height: 550px;
+}
+
 .project-name {
   margin-left: 0px;
 }
@@ -64,11 +71,7 @@ body {
   margin-right: -18px;
 }
 
-#device-selector span {
-  cursor: default;
-}
-
-#device-selector .clickable {
+.clickable {
   cursor: pointer;
 }
 
