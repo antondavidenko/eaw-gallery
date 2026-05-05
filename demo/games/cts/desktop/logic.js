@@ -111,7 +111,7 @@ function showMouseOut() {
 }
 
 function playNow() {
-	window.parent.location = "http://" + document.domain + "/skin/play.php";
+	window.parent.location.reload();
 }
 //--------------------------  ON START -------------------------------------------------------
 $(function () {

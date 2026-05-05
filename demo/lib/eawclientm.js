@@ -46,40 +46,41 @@ var EawClient = function(gameId, alias, pid, funded) {
 	}
 	
     this.playEawGame = function () {
-        var obj = this;
-        $.ajax({
-            url: url,
-            xhrFields: { withCredentials: true },
-            crossDomain: true,
-            type: 'get',
-            data: { time: $.now(), op: 'getPlayerInfo', id: gameId, format: 'jsonp', alias:alias, pid:pid, funded:funded },
-            dataType: 'jsonp',
-            cache: false,
-            success: function (res) {
-                getPlayerInfoSuccess(res, obj);
-            },
-            error: function () {
-                errorCallback(obj);
-            }
-        });
+        // var obj = this;
+        // $.ajax({
+        //     url: url,
+        //     xhrFields: { withCredentials: true },
+        //     crossDomain: true,
+        //     type: 'get',
+        //     data: { time: $.now(), op: 'getPlayerInfo', id: gameId, format: 'jsonp', alias:alias, pid:pid, funded:funded },
+        //     dataType: 'jsonp',
+        //     cache: false,
+        //     success: function (res) {
+        //         getPlayerInfoSuccess(res, obj);
+        //     },
+        //     error: function () {
+        //         errorCallback(obj);
+        //     }
+        // });
+        getPlayerInfoSuccess({}, this);
     };
 
     this.getPrize = function() {
-        var obj = this;
-        $.ajax({
-            url: url,
-            xhrFields: { withCredentials: true },
-            crossDomain: true,
-            type: 'get',
-            data: { op: 'getPrize', id: gameId, format: 'jsonp', alias:alias, pid:pid, funded:funded },
-            dataType: 'jsonp',
-            cache: false,
-            success: function (res) {
-                getPrizeSuccess(res, obj);
-            },
-            error: function () {
-                errorCallback(obj);
-            }
-        });
+        // var obj = this;
+        // $.ajax({
+        //     url: url,
+        //     xhrFields: { withCredentials: true },
+        //     crossDomain: true,
+        //     type: 'get',
+        //     data: { op: 'getPrize', id: gameId, format: 'jsonp', alias:alias, pid:pid, funded:funded },
+        //     dataType: 'jsonp',
+        //     cache: false,
+        //     success: function (res) {
+        //         getPrizeSuccess(res, obj);
+        //     },
+        //     error: function () {
+        //         errorCallback(obj);
+        //     }
+        // });
     };
 }
