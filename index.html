@@ -24,7 +24,13 @@
         <span id="mobile-selector" class="clickable"><img src="./images/view-switcher-mob.png"></span>
       </div>
       <div id="content">#content#</div>
-      <iframe id="desktop-viewer" src="" scrolling="no" frameborder="0"></iframe>
+      <div id="game-viewer">
+        <iframe id="game-viewer-iframe" src="" scrolling="no" frameborder="0"></iframe>
+        <br>
+        <br>
+        <br>
+        <div id="back-to-games-list" class="clickable" onclick="window.parent.location.reload(); return false;">BACK TO GAMES LIST</div>
+      </div>
     </div>
   </div>
   <script type="text/javascript">

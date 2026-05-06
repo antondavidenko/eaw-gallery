@@ -53,15 +53,29 @@ this.switchMode = (mode) => {
       element.querySelector(".clickable").addEventListener('click', () => {
         const {desktop, mobile} = this.content[i].play;
         const playLink = this.mode === 'desktop' ? desktop ? desktop : mobile : mobile;
-        this.showGame(playLink);
+        this.showGame(playLink, this.content[i].size);
       });
     }
   }
 }
 
-this.showGame = (game) => {
-  const viewer = document.getElementById("desktop-viewer");
-  viewer.src = game;
+this.showGame = (game, size) => {
+  const { width, height } = size;
+  const viewer = document.getElementById("game-viewer");
+  viewer.querySelector("iframe").src = game;
+  if (width <= 750) {
+    const gap = (880 - width) / 2;
+    viewer.style.padding = `25px ${gap}px 25px ${gap}px`;
+  } else {
+    viewer.querySelector("iframe").style.width = `${width}px`;
+    document.getElementById("body").style.width = `${width + 50}px`;
+    viewer.style.padding = `25px 25px 25px 25px`;
+  }
+
+  if (height < 550) {
+    viewer.querySelector("iframe").style.height = `${height}px`;
+  }
+
   viewer.style.display = "block";
   document.getElementById("content").style.display = "none";
   document.getElementById("device-selector").style.display = "none";
