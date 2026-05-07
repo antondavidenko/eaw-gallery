@@ -56,7 +56,7 @@ var EawClient = function(gameId, winnerCallback, looseOrErrorCallback, needToLog
         //         errorCallback(obj);
         //     }
         // });
-        getPlayerInfoSuccess({}, this);
+        getPlayerInfoSuccess({wonToday: '0', error: this.getCookie("prizeValue") === 'ERROR' ? '1' : '0'}, this);
     };
 
     this.getPrize = function() {
@@ -76,5 +76,15 @@ var EawClient = function(gameId, winnerCallback, looseOrErrorCallback, needToLog
         //         errorCallback(obj);
         //     }
         // });
+        getPrizeSuccess({error: '0', prizeValue: this.getCookie("prizeValue")}, this);
     };
+
+    this.getCookie = function(name) {
+      const cookies = document.cookie.split(';').reduce((cookies, cookie) => {
+        const [name, value] = cookie.trim().split('=');
+        cookies[name] = value;
+        return cookies;
+      }, {});
+      return cookies[name];
+    }
 }

@@ -1,5 +1,5 @@
 var EawClient = function(gameId, alias, pid, funded) {
-    this.gameId = gameId;
+	this.gameId = gameId;
 	this.alias = alias;
 	this.pid = pid;
 	this.funded = funded;
@@ -42,7 +42,7 @@ var EawClient = function(gameId, alias, pid, funded) {
 		this.successHandler = winnerCallback;
 		this.errorHandler = looseOrErrorCallback;
 		this.needToLoginCallback = needToLoginCallback;
-		this.alreadyPlayedToday = alreadyPlayedCallback;	
+		this.alreadyPlayedToday = alreadyPlayedCallback;
 	}
 	
     this.playEawGame = function () {
@@ -62,7 +62,7 @@ var EawClient = function(gameId, alias, pid, funded) {
         //         errorCallback(obj);
         //     }
         // });
-        getPlayerInfoSuccess({}, this);
+        getPlayerInfoSuccess({wonToday: '0', error: this.getCookie("prizeValue") === 'ERROR' ? '1' : '0'}, this);
     };
 
     this.getPrize = function() {
@@ -82,5 +82,15 @@ var EawClient = function(gameId, alias, pid, funded) {
         //         errorCallback(obj);
         //     }
         // });
+        getPrizeSuccess({error: '0', prizeValue: this.getCookie("prizeValue")}, this);
     };
+
+    this.getCookie = function(name) {
+      const cookies = document.cookie.split(';').reduce((cookies, cookie) => {
+        const [name, value] = cookie.trim().split('=');
+        cookies[name] = value;
+        return cookies;
+      }, {});
+      return cookies[name];
+    }
 }

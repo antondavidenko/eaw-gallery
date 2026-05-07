@@ -82,6 +82,21 @@ body {
   margin-right: -18px;
 }
 
+#prize-selector {
+  float: right;
+  margin-top: -70px;
+  margin-right: -1px;
+  display: none;
+  width: 98px;
+  height: 40px;
+  background-color:#101418;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+}
+
 .clickable {
   cursor: pointer;
 }
