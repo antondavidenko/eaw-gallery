@@ -68,7 +68,7 @@ var GameView = function()
 		this.onLogoStart = function() { 
 			$("#"+STATE_BEFORE_PLAY).hide();
 			_logoInVideo = new imgMoviePlayer(gameModel.imgLogoBefore, onLogoBeforeDone);
-			_logoInVideo.play(false);	
+			_logoInVideo.play(false, undefined, 0, 0);	
 		}
 
 		function onLogoBeforeDone() {
@@ -78,7 +78,7 @@ var GameView = function()
 		
 		function doLogoAfterDone() {
 			_logoOutVideo = new imgMoviePlayer(gameModel.imgLogoAfter, onLogoAfterDone);
-			_logoOutVideo.play(false);	
+			_logoOutVideo.play(false, undefined, 0, 0);	
 		}
 		
 		function onLogoAfterDone() {

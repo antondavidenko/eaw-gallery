@@ -208,6 +208,7 @@ var GameView = function()
 	function showBallText()
 	{
 	    var sphereCanvas = $("#sphereObj");
+      sphereCanvas.show();
         var sphereCtx = sphereCanvas[0].getContext('2d');
 		
         var textCanvasHtml = $("#textObject");
@@ -251,7 +252,6 @@ var GameView = function()
 		sphereCtx.putImageData(createEffect(progress),0,0);
 		//sphereCtx.putImageData(_imageData,0,0);
 		
-		console.log(progress);
 		if (progress>=100)
 		{
 			clearInterval(_animInterval);

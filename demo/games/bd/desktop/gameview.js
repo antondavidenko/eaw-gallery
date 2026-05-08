@@ -216,7 +216,7 @@ var GameView = function()
 		
 		$("#gameVideo").find("#main_channel_mp4").attr("src", "video/man"+_mansViewIds[id-1]+"_ending.mp4");
 		$("#gameVideo").find("#main_channel_ogg").attr("src", "video/man"+_mansViewIds[id-1]+"_ending.ogv");
-		$("#gameVideo").load();		
+		$("#gameVideo").load();
 
 		_requestInterval = setInterval(function(){requestTimer()}, 200);
 		_request_counter = 0;
@@ -226,7 +226,7 @@ var GameView = function()
 		
 		$("#gameVideo").on( "ended", function() {
 			showWin();
-		});		
+		});
 	}
 	
 	function requestTimer() {
@@ -243,7 +243,7 @@ var GameView = function()
 			clearInterval(_requestInterval);
 			$("#requestAnimation").hide();
 			$("#gameAnimation").hide();
-			$("#gameVideo").get(0).play();			
+			$("#gameVideo").get(0).play();
 		}
 	}	
 	

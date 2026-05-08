@@ -122,7 +122,7 @@ var GameView = function()
 		setState(STATE_GAME);
 		
 		_idleVideo = new imgMoviePlayer(gameModel.imgIdle, null);
-		_idleVideo.play(true,["bg_ex_game.jpg","bg_game.jpg"],0,63);		
+		_idleVideo.play(true,["bg_ex_game.jpg","bg_game.jpg"],0,63);
 	}
 
 	this.onSelected = function(id)

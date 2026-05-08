@@ -69,5 +69,5 @@ img{ border: 0px }
 #hitItBtnPasive {background: transparent url(images/hit_it.png) 0px 0px no-repeat; height: 90px; width: 186px; display: block;}
 #hitItBtnActive {background: transparent url(images/hit_it.png) 0px -90px no-repeat; height: 90px; width: 186px; display: none;}
 
-#sphereObj { position: absolute; z-index: 300050; }
+#sphereObj { position: absolute; z-index: 300050; top: 0px; left: 180px; display: none;}
 #textObject { position: absolute; z-index: 2; display: none; }

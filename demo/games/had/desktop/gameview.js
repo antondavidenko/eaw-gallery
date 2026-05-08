@@ -144,7 +144,7 @@ var GameView = function()
 			clearInterval(_requestInterval);		
 			videoState();
 		}
-	}	
+	}
 //---------------  VIDEO -------------------------------------------
 	function videoState()
 	{
@@ -152,7 +152,7 @@ var GameView = function()
 		
 		$("#gameVideo").find("#main_channel_mp4").attr("src", "video/"+_currentAnimation+".mp4");
 		$("#gameVideo").find("#main_channel_ogg").attr("src", "video/"+_currentAnimation+".ogg");
-		$("#gameVideo").load();	
+		$("#gameVideo").load();
 		
 		setTimeout(showWinVideo, 200);
 	}
@@ -162,7 +162,7 @@ var GameView = function()
 		$("#gameAnimation").hide();
 		$("#gameVideo").get(0).play();
 		_idleVideo.stop();
-		$("#gameVideo").on( "ended", function() { showWin(); });		
+		$("#gameVideo").on( "ended", function() { showWin(); });
 	}
 //--------------  WIN  --------------------------------------------	
 	function showWin()

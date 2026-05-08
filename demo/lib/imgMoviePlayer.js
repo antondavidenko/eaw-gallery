@@ -27,7 +27,11 @@ var imgMoviePlayer = function(array, callback)
 	function showMovie()
 	{
 		gameView.clearAll();
-		gameView.createSprite(_bg, 750/2, 550/2);		
+    if (typeof _bg === "string") {
+      gameView.createSprite(_bg, 750/2, 550/2);
+    } if (Array.isArray(_bg)) {
+      _bg.forEach((bg) => gameView.createSprite(bg, 750/2, 550/2));
+    }
 		gameView.createSprite(_imgArray[_movie_counter], 750/2 + _deltaX, 550/2 + _deltaY);
 		_movie_counter++;
 		
