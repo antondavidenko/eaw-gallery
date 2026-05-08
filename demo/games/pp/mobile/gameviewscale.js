@@ -14,7 +14,7 @@ var GameViewScale = function()
 			$("#p"+i+"pasive").show();
 		}		
 
-		$("#requestAnimation").show();
+		// $("#requestAnimation").show();
 		$("#requestAnimation").offset({ left:((gameModel.maxW - 110)/2) });
 		$("#requestAnimation").offset({ top:((gameModel.maxH - 110)/2) });
 		$("#requestAnimation").hide();		

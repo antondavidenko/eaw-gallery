@@ -155,7 +155,7 @@ function requestAnimationShow()
 {
 	_requestInterval = setInterval(function(){requestTimer()}, 20);
 	_request_counter = 0;	
-	$("#requestAnimation").show();
+	// $("#requestAnimation").show();
 }
 
 function requestTimer() 
