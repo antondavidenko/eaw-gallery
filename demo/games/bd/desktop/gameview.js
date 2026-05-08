@@ -215,7 +215,6 @@ var GameView = function()
 		setState(STATE_VIDEO);	
 		
 		$("#gameVideo").find("#main_channel_mp4").attr("src", "video/man"+_mansViewIds[id-1]+"_ending.mp4");
-		$("#gameVideo").find("#main_channel_ogg").attr("src", "video/man"+_mansViewIds[id-1]+"_ending.ogv");
 		$("#gameVideo").load();
 
 		_requestInterval = setInterval(function(){requestTimer()}, 200);
